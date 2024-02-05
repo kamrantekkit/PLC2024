@@ -8,7 +8,9 @@ ask prompt =
     else if line == "quit"
       then 
       putStrLn("qutting...")
-    else putStrLn ("you said: " ++ reverse line)
+    else do 
+      putStrLn ("you said: " ++ reverse line)
+      ask prompt
   
 
 main :: IO ()
