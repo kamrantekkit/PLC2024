@@ -1,10 +1,9 @@
 onePlusone = do
-    print "1 + 1 = 2"
-    print "Blue archive"
+    putStrLn("1 + 1 = 2")
     
 
 main = do
     putStrLn "Welcome to the programme. Please enter your name"
-    onePlusone
     name <- getLine
+    onePlusone
     putStrLn("Hello " ++ name ++ ", hope you like Haskell.")
