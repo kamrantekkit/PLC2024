@@ -36,6 +36,7 @@ public class ErrorsEnum
     {
         Result result = null;
         
+
         switch (e) {
         case FP_ROUNDING:
             result = Result.A_BIT_DIFFERENT;
@@ -49,6 +50,31 @@ public class ErrorsEnum
         case INT_OVERFLOW:
             result = Result.VERY_DIFFERENT;
             break;
+        
+        }
+        
+        return result;
+    }
+
+
+    private static Error Result2error(Result e)
+    {
+        Error result = null;
+
+        switch (e) {
+            case A_BIT_DIFFERENT:
+                result = Error.FP_ROUNDING;
+                break;
+            case INFINITY:
+                result = Error.FP_OVERFLOW;
+                break;
+            case Zero:
+                result = Error.FP_UNDERFLOW;
+                break;
+            case VERY_DIFFERENT:
+                result = Error.INT_OVERFLOW
+                break;
+        
         }
         
         return result;
