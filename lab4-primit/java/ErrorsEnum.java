@@ -68,11 +68,11 @@ public class ErrorsEnum
             case INFINITY:
                 result = Error.FP_OVERFLOW;
                 break;
-            case Zero:
+            case ZERO:
                 result = Error.FP_UNDERFLOW;
                 break;
             case VERY_DIFFERENT:
-                result = Error.INT_OVERFLOW
+                result = Error.INT_OVERFLOW;
                 break;
         
         }
