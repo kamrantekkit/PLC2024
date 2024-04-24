@@ -58,7 +58,7 @@ things = [111, piece1, "hello", advert1, [piece2]]
 
 print("things = %s" % things)
 
-piecesFromThings = "todo" #TASK 5.3.(c) -- replace "todo" by a list comprehension
+piecesFromThings = [ piece for piece in things if piece.__class__ == Piece ]  #TASK 5.3.(c) -- replace "todo" by a list comprehension
 
 print("piecesFromThings = %s" % piecesFromThings)
 
@@ -66,7 +66,7 @@ playlist1 = [piece1, advert1, piece2]
 
 print("playlist1 = %s" % playlist1)
 
-lengths1 = [ item.length_secs for item in playlist1 ]
+lengths1 = [ item.length_secs for item in playlist1 if item.length_secs < 20 ]
 
 print("lengths1 = %s" % lengths1)
 
